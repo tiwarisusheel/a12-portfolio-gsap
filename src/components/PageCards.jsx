@@ -3,6 +3,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import sherlogo from "../assets/full-logo.webp"
+import coding from "../assets/coding.png"
+import data from "../assets/data.png"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,21 +13,21 @@ const pages = [
   {
     title: "Projects & Assignments – Sheryians Coding School",
     description: "Explore my learning journey, assignments and projects built during my coding journey.",
-    image: "/src/assets/full-logo.webp",
+    image: sherlogo,
     path: "/sheryians",
     label: "Explore Learning",
   },
   {
     title: "My Projects",
     description: "Explore my personal projects, experiments and creative web development work.",
-    image: "/src/assets/coding.png",
+    image: coding,
     path: "/mypractice",
     label: "View My Projects",
   },
   {
     title: "Company Projects",
     description: "Explore professional projects and development work completed for companies.",
-    image: "/src/assets/data.png",
+    image: data,
     path: "/company",
     label: "View Company Work",
   },

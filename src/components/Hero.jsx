@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import { useRef } from "react";
+import susheel from "../assets/susheel.jpeg"
 
  gsap.registerPlugin(SplitText);
 
@@ -151,7 +152,7 @@ const Hero = () => {
                 }}
               >
                 <img
-                  src="/src/assets/susheel.jpeg"
+                  src={susheel}
                   alt="My profile"
                   className="absolute left-1/2 top-1/2 w-[100%] h-[100%] -translate-x-1/2 -translate-y-1/2 object-contain"
                 />

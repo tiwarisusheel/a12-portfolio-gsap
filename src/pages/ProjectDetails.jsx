@@ -6,13 +6,50 @@ const ProjectDetails = () => {
   const { projects, loading, error } = useContext(ProjectsContext);
   const { slug } = useParams();
 
-  if (loading) {
-    return <p className="pt-28 text-center text-white">Loading project...</p>;
-  }
+    if (loading) {
+  return (
+    <div className="min-h-[calc(100vh-80px)] flex items-center justify-center px-4">
+      <div className="text-center">
+        <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-4 border-yellow-300 border-t-black"></div>
 
-  if (error) {
-    return <p className="pt-28 text-center text-red-400">Error: {error}</p>;
-  }
+        <p className="text-lg font-medium text-gray-800 sm:text-xl">
+          Loading Project details...
+        </p>
+
+        <p className="mt-1 text-sm text-gray-500">
+          Please wait while project details are loading.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+if (error) {
+  return (
+    <div className="min-h-[60vh] flex items-center justify-center px-4">
+      <div className="w-full max-w-md rounded-2xl border border-red-200 bg-red-50 p-6 text-center shadow-sm sm:p-8">
+        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 text-xl">
+          ⚠️
+        </div>
+
+        <h2 className="text-xl font-semibold text-red-700 sm:text-2xl">
+          Something went wrong
+        </h2>
+
+        <p className="mt-2 break-words text-sm text-red-600 sm:text-base">
+          {error}
+        </p>
+
+        <button
+          onClick={() => window.location.reload()}
+          className="mt-5 rounded-lg bg-black px-5 py-2.5 text-sm font-medium text-white transition hover:scale-105 hover:bg-gray-800"
+        >
+          Try Again
+        </button>
+      </div>
+    </div>
+  );
+}
 
   const project = projects.find((project) => project.slug === slug);
 

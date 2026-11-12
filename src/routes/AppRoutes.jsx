@@ -7,7 +7,7 @@ const Mypractice = lazy(()=> import("../pages/mypractice"))
 import Contact from "../pages/contact"
 import ProjectDetails from "../pages/ProjectDetails"
 import { lazy, Suspense } from "react"
-import { Heading1 } from "lucide-react"
+
 
 const AppRoutes = () => {
     const router = createBrowserRouter([

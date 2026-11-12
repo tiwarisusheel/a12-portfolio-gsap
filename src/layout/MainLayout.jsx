@@ -19,6 +19,7 @@ const MainLayout = () => {
 
     return () => smoother.kill();
   });
+  
   return (
     <div >
         <Navbar />

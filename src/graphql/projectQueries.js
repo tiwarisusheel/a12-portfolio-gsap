@@ -1,7 +1,7 @@
 
 export const GET_PROJECTS = `
   query GetProjects {
-    allProjects {
+    allProjects(first: 100) {
       id
       title
       description

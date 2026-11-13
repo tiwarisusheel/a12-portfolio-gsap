@@ -16,7 +16,7 @@ const Hero = () => {
     const split = SplitText.create(textRef.current, { type: "chars", aria: "hidden" });
 
     const tl = gsap.timeline({
-      delay:0.5,
+      delay:2,
     });
 
     tl.from(split.chars, {
@@ -30,7 +30,7 @@ const Hero = () => {
 
   useGSAP(() => {
   const tl = gsap.timeline({
-    delay:2,
+    delay:0.5,
   });
 
    tl.from(ballRef.current, {

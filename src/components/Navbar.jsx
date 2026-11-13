@@ -83,9 +83,9 @@ const Navbar = () => {
       >
         <div className="flex flex-col p-5">
           {links.map((link, index) => (
-            <a
+            <NavLink
               key={link.name}
-              href={link.href}
+              to={link.to}
               onClick={() => setMenuOpen(false)}
               className="border-b border-white/10 py-3 text-sm font-medium text-gray-300 transition-colors hover:text-orange-400"
             >
@@ -93,7 +93,7 @@ const Navbar = () => {
                 0{index + 1}
               </span>
               {link.name}
-            </a>
+            </NavLink>
           ))}
 
           <Link

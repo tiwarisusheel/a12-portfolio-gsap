@@ -69,7 +69,7 @@ console.log("Filtered projects:", sheryians);
           ← Back to Home
         </Link>
     <h1 className="mb-8 text-3xl font-bold text-white">
-      Company Projects
+      Sheryians Projects
     </h1>
 
     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
